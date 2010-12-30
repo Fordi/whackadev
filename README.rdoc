@@ -1,0 +1,1 @@
+Hey.  This is the standard Kata I now write to ensure understanding of a language.
