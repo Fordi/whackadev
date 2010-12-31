@@ -25,9 +25,6 @@ package org.fordi.WhackADev
 		private static const MISS:Number = 1;
 		private static const STUB:Number = 2;
 		
-		private function Click():void {
-			trace('CLICK!');
-		}
 		public function MoleHole(X:Number, Y:Number, Delegate:MoleHoleDelegate) {
 			super();
 			x = X;
@@ -58,7 +55,6 @@ package org.fordi.WhackADev
 			
 			_waiting = _hasMole = -1;
 			
-			trace(x, y, width, height);6
 		}
 		private function initializeOnce():void {
 			if (_initialized) return;

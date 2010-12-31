@@ -10,7 +10,6 @@ package org.fordi.WhackADev
 		private var _letters:Array;
 		
 		protected function createLetter(letter:String, x:Number, y:Number, theta:Number, size:Number = 8, color:Number = -1, duration:Number = 1):void {
-			trace(duration);
 			var startX:Number, startY:Number, side:Number, line:Number;
 			side = Math.floor(Math.random() * 4);
 			line = Math.random();

@@ -3,7 +3,7 @@ package {
 	public class Preloader extends FlxPreloader { 
 		public function Preloader():void {
 			className = "WhackADev";
-			myURL = "fordi.org";
+			//myURL = "fordi.org";
 			super();
 		}
 	}
