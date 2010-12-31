@@ -8,7 +8,7 @@ package {
 
 	public class WhackADev extends FlxGame {
 		public function WhackADev():void {
-			super(320,240,MenuState);
+			super(320,240,MenuState, 2);
 			FlxState.bgColor = 0xffffffff;
 			useDefaultHotKeys = true;
 		}
