@@ -16,6 +16,7 @@ package org.fordi.WhackADev
 		[Embed(source = '../../../../data/hiccup.mp3')] private var SndHiccup:Class;
 		[Embed(source = '../../../../data/swoosh.mp3')] private var SndSwoosh:Class;
 		[Embed(source = '../../../../data/whack.mp3')] private var SndWhack:Class;
+		[Embed(source = '../../../../data/timeout.mp3')] private var MusTimeout:Class;
 		
 		private var moleHoles:Array;
 		private var _hits:Number;
@@ -97,6 +98,7 @@ package org.fordi.WhackADev
 			_gameTime = 30;
 			
 			createHUD();
+			FlxG.play(MusTimeout);
 		}
 		public function reset():void {
 			FlxG.state = new MenuState();
