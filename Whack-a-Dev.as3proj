@@ -15,6 +15,7 @@
   <classpaths>
     <class path="src" />
     <class path="..\..\Libraries\flixel" />
+    <class path="..\..\Flixel" />
   </classpaths>
   <!-- Build options -->
   <build>
