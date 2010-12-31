@@ -35,18 +35,22 @@ package org.fordi.WhackADev
 			_delegate = Delegate;
 			_moleHole = new FlxSprite().loadGraphic(Delegate.moleHole());
 			_moleHole.solid = false;
+			_moleHole.visible = false;
 			add(_moleHole, true);
 			
 			_hitHole = new FlxSprite().loadGraphic(Delegate.hitHole());
 			_hitHole.solid = false;
+			_hitHole.visible = false;
 			add(_hitHole, true);
 			
 			_stubHole = new FlxSprite().loadGraphic(Delegate.stubHole());
 			_stubHole.solid = false;
+			_stubHole.visible = false;
 			add(_stubHole, true);
 			
 			_emptyHole = new FlxSprite().loadGraphic(Delegate.emptyHole());
 			_emptyHole.solid = false;
+			_emptyHole.visible = true;
 			add(_emptyHole, true);
 			
 			width = 96;
@@ -93,6 +97,7 @@ package org.fordi.WhackADev
 			}
 		}
 		public function showMole():void {
+			if (_hasMole != -1 || _waiting != -1) return;
 			_hasMole = setTimeout(hideMole, 2000, MISS);
 			_emptyHole.visible = _hitHole.visible = _stubHole.visible = false;
 			_moleHole.visible = true;
