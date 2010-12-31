@@ -13,6 +13,9 @@ package org.fordi.WhackADev
 		[Embed(source = "../../../../data/moleHole.png")] private var ImgMoleHole:Class;
 		[Embed(source = "../../../../data/hitHole.png")] private var ImgHitMole:Class;
 		[Embed(source = "../../../../data/stubHole.png")] private var ImgStubHole:Class;
+		[Embed(source = '../../../../data/hiccup.mp3')] private var SndHiccup:Class;
+		[Embed(source = '../../../../data/swoosh.mp3')] private var SndSwoosh:Class;
+		[Embed(source = '../../../../data/whack.mp3')] private var SndWhack:Class;
 		
 		private var moleHoles:Array;
 		private var _hits:Number;
@@ -27,15 +30,18 @@ package org.fordi.WhackADev
 		
 		/* Implementation of MoleHoleDelegate methods */
 		public function hitMole():void {
+			FlxG.play(SndWhack);
 			_hits++;
 			
 		}
 		public function missMole():void {
+			FlxG.play(SndSwoosh);
 			_misses++;
 		}
 		public function stubHammer():void {
+			FlxG.play(SndHiccup);
 			_stubs++;
-			FlxG.quake.start(0.05, 0.25);
+			FlxG.quake.start(0.01, 0.125);
 		}
 		public function emptyHole():Class {
 			return ImgEmptyHole;

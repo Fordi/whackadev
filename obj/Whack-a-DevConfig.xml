@@ -14,7 +14,7 @@
     </define>
     <define append="true">
       <name>CONFIG::timeStamp</name>
-      <value>'12/30/2010'</value>
+      <value>'12/31/2010'</value>
     </define>
     <source-path append="true">
       <path-element>C:\Flash\Projects\whackadev\src</path-element>
